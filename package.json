@@ -10,6 +10,21 @@
   "engines": {
     "node": ">= 8.0.0"
   },
+  "scripts": {
+    "release": "release-it"
+  },
+  "release-it": {
+    "github": {
+      "release": true,
+      "releaseName": "v${version}",
+      "assets": [
+        "build/*.zip"
+      ]
+    },
+    "npm": {
+      "publish": false
+    }
+  },
   "browserslist": [
     "last 2 versions"
   ],
@@ -44,6 +59,7 @@
     "postcss-import": "~12.0",
     "postcss-url": "~8.0",
     "prettier-eslint": "~9.0",
+    "release-it": "^12.3.3",
     "require-directory": "~2.1",
     "require-from-string": "~2.0",
     "stylelint": "~10.1",
